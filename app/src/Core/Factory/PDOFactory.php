@@ -8,14 +8,13 @@ class PDOFactory
 {
     private string $user = 'root';
     private static array $instances = [];
-
     const MYSQL = 'getMysqlConnection';
 
     private function __construct(string $type)
     {
         $this->pdo = match ($type) {
             'getMysqlConnection' => $this->getMysqlConnection(),
-             default => throw new \InvalidArgumentException('La DB demandé n\'est pas disponible'),
+            default => echo('pute') throw new \InvalidArgumentException('La DB demandé n\'est pas disponible'),
         };
     }
 

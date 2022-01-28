@@ -15,4 +15,9 @@ class CommentaryManager extends BaseManager
 
         return new Commentary($result);
     }
+
+    public function insertCommentary()
+    {
+        
+    }
 }

@@ -15,4 +15,9 @@ class UserManger extends BaseManager
 
         return new User($result);
     }
+
+    public function insertUser()
+    {
+        
+    }
 }

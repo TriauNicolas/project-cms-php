@@ -6,6 +6,9 @@ use App\Entity\Article;
 
 class ArticleManager extends BaseManager
 {
+
+    public $pute = "pute";
+
     public function findAllArticles()
     {
         $query = 'SELECT * FROM articles';
@@ -13,6 +16,14 @@ class ArticleManager extends BaseManager
 
         $result = $stmnt->fetchAll(\PDO::FETCH_ASSOC)[0];
 
-        return new ArticArticleManagerle($result);
+        return new ArticleManager($result);
     }
+    
+    // public function insertArticles($insertQuery)
+    // {
+    //     echo '<pre>';
+    //     var_dump($insertQuery);
+    //     echo '</pre>';
+    //     $insertQuery = "INSERT INTO articles VALUES {$insertQuery}";
+    // }
 }
